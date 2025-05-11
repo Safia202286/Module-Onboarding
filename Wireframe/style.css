@@ -1,89 +1,170 @@
-/* Here are some starter styles
-You can edit these or replace them entirely 
-It's showing you a common way to organise CSS 
-And includes solutions to common problems 
-As well as useful links to learn more */
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           line-height: 1.6;
+           background-color: white;
+       }
 
-/* ====== Design Palette ======
- This is our "design palette".
- It sets out the colours, fonts, styles etc to be used in this design 
- At work, a designer will give these to you based on the corporate brand, but while you are learning
- You can design it yourself if you like
- Inspect the starter design with Devtools
- Click on the colour swatches to see what is happening
- I've put some useful CSS you won't have learned yet
- For you to explore and play with if you are interested
- https://web.dev/articles/min-max-clamp
- https://scrimba.com/learn-css-variables-c026
-====== Design Palette ====== */
-:root {
-  --paper: oklch(7 0 0);
-  --ink: color-mix(in oklab, var(--color) 5%, black);
-  --font: 100%/1.5 system-ui;
-  --space: clamp(6px, 6px + 2vw, 15px);
-  --line: 1px solid;
-  --container: 1280px;
+       /* Centered title section */
+       .title-section {
+           background-color: white;
+           padding: 30px;
+           max-width: 1000px;
+           margin: 0 auto;
+           text-align: center; /* Center the text */
+       }
+
+       .title-section h1 {
+           text-align: center;
+           margin-bottom: 5px; /* Add some space below the title */
+       }
+
+       .title-section p {
+           max-width: 700px;
+           margin: 20px auto;
+           text-align: center; /* Ensure the paragraph is also centered */
+       }
+
+       
+
+       /* Wireframe-Modelling section */
+          .Wireframe-Modelling {
+          max-width: 1000px;
+          margin: 30px auto;
+          padding: 40px;
+          background-color: white;
+          border-radius: 10px;
+       }
+
+         .Wireframe-Modelling img {
+          width: 100%;
+          max-width: 800%;
+          height: auto; /* Adjust as needed */
+          object-fit: cover;
+          display: block;
+          margin: 25px auto;
+          border-radius: 8px;
+          border: 1px solid #e0e0e0;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+
+        .Wireframe-Modelling h2 {
+         max-width: 100%;
+         margin: 20px auto 10px;
+         text-align: left;
+         padding: 0 20px; /* Align with inner padding if needed */
+        }
+
+       .Wireframe-Modelling p {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0 20px;
+        text-align: justify;
+        }
+
+    .Wireframe-Modelling a {
+    display: inline-block;  /* Changed from block to inline-block */
+    text-align: center;    /* Center text within the box */
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: 15px 0;        /* Top/bottom margin only */
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: auto;          /* Box shrinks to fit content */
 }
-/* ====== Base Elements ======
- General rules for basic HTML elements in any context */
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font: var(--font);
+
+.Wireframe-Modelling a:hover {
+    background-color: #f9f4ff;
+    border-color: indigo;
 }
-a {
-  padding: var(--space);
-  border: var(--line);
-  max-width: fit-content;
-}
-img,
-svg {
-  width: 100%;
-  object-fit: cover;
-}
-/* ====== Site Layout ====== 
-Setting the overall rules for page regions
-https://www.w3.org/WAI/tutorials/page-structure/regions/
-*/
-main {
-  max-width: var(--container);
-  margin: 0 auto calc(var(--space) * 4) auto;
-}
-footer {
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-}
-/* ====== Articles Grid Layout ====
-Setting the rules for how articles are placed in the main element.
-Inspect this in Devtools and click the "grid" button in the Elements view
-Play with the options that come up.
-https://developer.chrome.com/docs/devtools/css/grid
-https://gridbyexample.com/learn/
-*/
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space);
-  > *:first-child {
-    grid-column: span 2;
-  }
-}
-/* ====== Article Layout ====== 
-Setting the rules for how elements are placed in the article. 
-Now laying out just the INSIDE of the repeated card/article design.
-Keeping things orderly and separate is the key to good, simple CSS.
-*/
-article {
-  border: var(--line);
-  padding-bottom: var(--space);
-  text-align: left;
-  display: grid;
-  grid-template-columns: var(--space) 1fr var(--space);
-  > * {
-    grid-column: 2/3;
-  }
-  > img {
-    grid-column: span 3;
-  }
-}
+
+       /* Container for README and Branch sections */
+       .content-section {
+           display: flex;
+           justify-content: center;
+           padding: 20px;
+           gap: 30px;
+           flex-wrap: wrap;
+           max-width: 1500px;
+           margin: 0 auto;
+           background-color: white;
+       }
+
+       .README, .Branch {
+           flex: 1;
+           min-width: 400px;
+           max-width: 450px;
+           background-color: white;
+           padding: 25px;
+           box-shadow: white;
+           border-radius: 10px;
+           border: 1px solid #f9f7f7; /* Added faint gray border */
+       }
+
+       .README img,
+       .Branch img {
+           width: 100%;
+           height: 40%;
+           margin: 0 auto 20px auto;
+           display: block;
+           border-radius: 6px;
+           box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+       }
+
+       .README h3,
+       .Branch h3 {
+           text-align: justify;  
+           margin-left: 0px; /* Remove any additional left margin */
+       }
+
+       .README p,
+       .Branch p {
+           text-align: justify;
+           margin-bottom: 20px;
+       }
+
+       .README a,
+       .Branch a {
+           display: inline-block;
+           text-align: left;
+           padding: 8px 16px;
+           background-color: white;
+           color: black;
+           text-decoration: none;
+           border: 2px solid black;
+           border-radius: 4px;
+           margin: 15px 0;        /* Top/bottom margin only */
+           transition: background-color 0.3s;
+           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+           width: auto;          /* Box shrinks to fit content */
+       }
+
+       footer {
+           text-align: center;
+           padding: 20px;
+           background-color: white;
+           color: #222;
+           margin-top: 30px;
+       }
+
+       @media (max-width: 768px) {
+           .header-section {
+               padding: 20px;
+           }
+
+           .content-section {
+               flex-direction: column;
+               align-items: center;
+           }
+
+           .README, .Branch {
+               width: 100%;
+               max-width: 100%;
+           }
+       }
