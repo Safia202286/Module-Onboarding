@@ -154,10 +154,8 @@ article a {
     border-radius: 8px 8px 0 0;
     background-color: rgb(251, 250, 247);
     z-index: 100; /* Keeps footer above other content */
-    
-    
-   
-}
+    }
+
 
     @media (max-width: 768px) {
         header {
@@ -165,12 +163,12 @@ article a {
         }
 
         .content-wrapper {
-            flex-direction: column;
-            align-items: center;
+        flex-direction: column;
+        align-items: center;
         }
 
         article {
-            width: 100%;
-            max-width: 100%;
+        width: 100%;
+        max-width: 100%;
         }
          }
